@@ -1,19 +1,20 @@
 <!Doctype html>
 <html>
-    <head>
+    <header>
         <nav>
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
             </ul>
         </nav>
-    </head>
+    </header>
     <body>
+        <main>
         <div id='logo'>
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
         </div>
         <div id="searchbar">
-            <input type='text' placeholdr="Search" id="box">
+            <input type='text' placeholder="Search" id="box">
             
         </div>
         <div id="under-sb">
@@ -23,37 +24,48 @@
         <div id="lan">
             <p>Google offered in <a href="#">Tieng Viet </a><a href='#'>Francais</a></p>
         </div>
+        </main>
         <footer>
             <p id="upper-footer">Vietnam</p>
             <ul id=lower-footer>
-                <li><a href="#">Advertising</a></li>
-                <li>Business</li>
-                <li>About</li>
-                <li>How search work</li>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Settings</li>
+                <li class="left-footer"><a href="#">Advertising</a></li>
+                <li class="left-footer"><a href="#">Business</a></li>
+                <li class="left-footer"><a href="#">About</a></li>
+                <li class="left-footer"><a href="#">How search works</a></li>
+                <li class="right-footer"><a href="#">Privacy</a></li>
+                <li class="right-footer"><a href="#">Terms</a></li>
+                <li class="right-footer"><a href="#">Settings</a></li>
             </ul>
         </footer>
     </body>
 </html>
 <style>
     body {
-        background: white;
+        background: white;        
+        height: 100%;
+        margin: 0;
+        
+        
     }
     img {
         display: block;
-      
         margin: auto;
         padding: 10px;
+        margin-bottom: 10px;
+        
+    }
+    #logo {
+        
+        position: relative;
+        top: 20px;
     }
     #box {
         display: block;
         margin: auto;
         margin-bottom: 10px;
-        width: 60%;
-        padding: 10px;
-        border-radius: 2px;
+        width: 40%;
+        padding: 8px;
+        border-radius: 25px;
     }
     #under-sb {
         display: flex;
@@ -70,6 +82,55 @@
     }
     footer {
         background: lightgray;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #upper-footer {
+        margin-bottom: 10px;
+        border-bottom: 1px solid whitesmoke;
+        padding: 10px 0;
+        width: 98%;
+        margin: auto;
+        box-sizing: border-box;       
+    }
+    #lower-footer {
+        padding: 10px 0;
+        width: 98%;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         
     }
+    li {
+        display: inline;
+    }
+    nav {
+        float: right;
+    }
+    .left-footer {
+        float: left;
+        margin-right: 10px ;
+    }
+    .right-footer {
+        float: right;
+        margin-left: 10px;
+
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 20%;
+    }
+
 </style>
